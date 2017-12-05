@@ -18,7 +18,7 @@ const create = (req, res) => {
 }
 
 const login = (req, res) => {
-  User.find({
+  User.findOne({
     username: req.body.username
   })
     .then(user => {
@@ -29,8 +29,10 @@ const login = (req, res) => {
              username: req.body.username
            }, JWT_SECRET_KEY, function (err, token) {
              if (err) {
+               console.log(err);
                res.status(500).send(err)
              } else {
+               console.log(token);
                res.status(200).send(token)
              }
            })

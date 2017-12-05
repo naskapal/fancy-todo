@@ -4,12 +4,12 @@ const Schema = mongoose.Schema
 
 const todoSchema = mongoose.Schema({
   author: {
-    type: Schema.types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User"
-  }
+  },
   task: String,
   isComplete: {
-    type: boolean,
+    type: Boolean,
     default: false
   }
 })
