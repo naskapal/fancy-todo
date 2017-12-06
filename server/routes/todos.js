@@ -1,9 +1,10 @@
 const router = require('express').Router()
 const Todo = require('../controllers/todoController')
+const {verifyToken} = require('../helpers/tokenManager')
 
-router.post('/', Todo.create)
-router.get('/', Todo.findAll)
-router.put('/', Todo.update)
-router.delete('/', Todo.destroy)
+router.post('/', verifyToken,  Todo.create)
+router.get('/', verifyToken, Todo.findAll)
+router.put('/', verifyToken, Todo.update)
+router.delete('/', verifyToken, Todo.destroy)
 
 module.exports = router

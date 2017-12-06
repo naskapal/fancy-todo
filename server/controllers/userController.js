@@ -26,6 +26,7 @@ const login = (req, res) => {
         bcrypt.compare(req.body.password, user.password)
          .then(correct => {
            jwt.sign({
+             userId: user.id,
              username: req.body.username
            }, JWT_SECRET_KEY, function (err, token) {
              if (err) {

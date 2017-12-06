@@ -11,6 +11,7 @@
           </label>
         </span>
       </li>
+    </ul>
   </div>
 </template>
 
@@ -23,9 +24,9 @@ export default {
       'updateTask'
     ]),
     updateStatus () {
-      this.updateTask(todo.id)
+      this.updateTask(this.todo.id)
     }
-  },
+  }
 }
 </script>
 

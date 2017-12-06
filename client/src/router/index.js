@@ -3,6 +3,9 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import FormRegister from '@/components/FormRegister'
 import FormLogin from '@/components/FormLogin'
+import TodosIndex from '@/components/TodosIndex'
+// import store from '@/vuex/store'
+
 Vue.use(Router)
 
 export default new Router({
@@ -18,6 +21,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: FormLogin
+    },
+    {
+      path: '/todos',
+      name: 'todos',
+      component: TodosIndex
     }
   ]
 })

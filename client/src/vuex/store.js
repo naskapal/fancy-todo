@@ -8,7 +8,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userToken: '',
-    todos = ''
+    todos: [],
+    todosPending: [],
+    todosCompleted: []
   },
   actions,
   mutations
